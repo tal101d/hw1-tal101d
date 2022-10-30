@@ -1,0 +1,30 @@
+Index: Assignment1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n\r\npublic class Assignment1 {\r\n\tpublic static void main(String[] args){\r\n\t\tint offset = (int)args[0];\r\n\t\tchar chr = (int)args[1];\r\n\t\tnewChar = (char)(chr + offset));\r\n\t\tSystem.out.println(\"New char is \" + newChar + \".\");\r\n\t}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assignment1.java b/Assignment1.java
+--- a/Assignment1.java	(revision a41ebf79ec6d51773943cb5a6cce64d5e241c9a4)
++++ b/Assignment1.java	(date 1667121661419)
+@@ -2,9 +2,16 @@
+ 
+ public class Assignment1 {
+ 	public static void main(String[] args){
+-		int offset = (int)args[0];
+-		char chr = (int)args[1];
+-		newChar = (char)(chr + offset));
++
++		// Getting arguments
++
++		char chr = args[0].charAt(0);
++		int offset =Integer.parseInt(args[1]);
++
++		//Calculating the new Char
++		char newChar = (char)((int)(chr) + offset);
++
++		//Printing the new Char
+ 		System.out.println("New char is " + newChar + ".");
+ 	}
+ }
